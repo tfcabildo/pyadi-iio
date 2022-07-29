@@ -88,68 +88,68 @@ class adaq8092(rx, context_manager):
                 + str(self.alt_bit_pol_en_available)
             )
 
-    @property
-    def clk_dc_mode_available(self):
-        """Get available Clock Duty Cycle Stabilizer."""
-        return self._get_iio_dev_attr_str("clk_dc_mode_available")
+    # @property
+    # def clk_dc_mode_available(self):
+    #     """Get available Clock Duty Cycle Stabilizer."""
+    #     return self._get_iio_dev_attr_str("clk_dc_mode_available")
 
-    @property
-    def clk_dc_mode(self):
-        """Get Clock Duty Cycle Stabilizer."""
-        return self._get_iio_dev_attr_str("clk_dc_mode")
+    # @property
+    # def clk_dc_mode(self):
+    #     """Get Clock Duty Cycle Stabilizer."""
+    #     return self._get_iio_dev_attr_str("clk_dc_mode")
 
-    @clk_dc_mode.setter
-    def clk_dc_mode(self, rate):
-        """Set Clock Duty Cycle Stabilizer."""
-        if rate in self.clk_dc_mode_available:
-            self._set_iio_dev_attr_str("clk_dc_mode", rate)
-        else:
-            raise ValueError(
-                "Error: Clock Duty Cycle Stabilizer not supported \nUse one of: "
-                + str(self.clk_dc_mode_available)
-            )
+    # @clk_dc_mode.setter
+    # def clk_dc_mode(self, rate):
+    #     """Set Clock Duty Cycle Stabilizer."""
+    #     if rate in self.clk_dc_mode_available:
+    #         self._set_iio_dev_attr_str("clk_dc_mode", rate)
+    #     else:
+    #         raise ValueError(
+    #             "Error: Clock Duty Cycle Stabilizer not supported \nUse one of: "
+    #             + str(self.clk_dc_mode_available)
+    #         )
 
-    @property
-    def clk_phase_mode_available(self):
-        """Get available Output Clock Phase Delay."""
-        return self._get_iio_dev_attr_str("clk_phase_mode_available")
+    # @property
+    # def clk_phase_mode_available(self):
+    #     """Get available Output Clock Phase Delay."""
+    #     return self._get_iio_dev_attr_str("clk_phase_mode_available")
 
-    @property
-    def clk_phase_mode(self):
-        """Get Output Clock Phase Delay."""
-        return self._get_iio_dev_attr_str("clk_phase_mode")
+    # @property
+    # def clk_phase_mode(self):
+    #     """Get Output Clock Phase Delay."""
+    #     return self._get_iio_dev_attr_str("clk_phase_mode")
 
-    @clk_phase_mode.setter
-    def clk_phase_mode(self, rate):
-        """Set Output Clock Phase Delay."""
-        if rate in self.clk_phase_mode_available:
-            self._set_iio_dev_attr_str("clk_phase_mode", rate)
-        else:
-            raise ValueError(
-                "Error: Output Clock Phase Delay not supported \nUse one of: "
-                + str(self.clk_phase_mode_available)
-            )
+    # @clk_phase_mode.setter
+    # def clk_phase_mode(self, rate):
+    #     """Set Output Clock Phase Delay."""
+    #     if rate in self.clk_phase_mode_available:
+    #         self._set_iio_dev_attr_str("clk_phase_mode", rate)
+    #     else:
+    #         raise ValueError(
+    #             "Error: Output Clock Phase Delay not supported \nUse one of: "
+    #             + str(self.clk_phase_mode_available)
+    #         )
 
-    @property
-    def clk_pol_mode_available(self):
-        """Get available CLKOUT Polarity."""
-        return self._get_iio_dev_attr_str("clk_pol_mode_available")
+    # @property
+    # def clk_pol_mode_available(self):
+    #     """Get available CLKOUT Polarity."""
+    #     return self._get_iio_dev_attr_str("clk_pol_mode_available")
 
-    @property
-    def clk_pol_mode(self):
-        """Get CLKOUT Polarity."""
-        return self._get_iio_dev_attr_str("clk_pol_mode")
+    # @property
+    # def clk_pol_mode(self):
+    #     """Get CLKOUT Polarity."""
+    #     return self._get_iio_dev_attr_str("clk_pol_mode")
 
-    @clk_pol_mode.setter
-    def clk_pol_mode(self, rate):
-        """Set CLKOUT Polarity."""
-        if rate in self.clk_pol_mode_available:
-            self._set_iio_dev_attr_str("clk_pol_mode", rate)
-        else:
-            raise ValueError(
-                "Error: CLKOUT Polarity not supported \nUse one of: "
-                + str(self.clk_pol_mode_available)
-            )
+    # @clk_pol_mode.setter
+    # def clk_pol_mode(self, rate):
+    #     """Set CLKOUT Polarity."""
+    #     if rate in self.clk_pol_mode_available:
+    #         self._set_iio_dev_attr_str("clk_pol_mode", rate)
+    #     else:
+    #         raise ValueError(
+    #             "Error: CLKOUT Polarity not supported \nUse one of: "
+    #             + str(self.clk_pol_mode_available)
+    #         )
 
     @property
     def data_rand_en_available(self):
@@ -193,68 +193,68 @@ class adaq8092(rx, context_manager):
                 + str(self.dout_en_available)
             )
 
-    @property
-    def dout_mode_available(self):
-        """Get available Digital Output Mode."""
-        return self._get_iio_dev_attr_str("dout_mode_available")
+    # @property
+    # def dout_mode_available(self):
+    #     """Get available Digital Output Mode."""
+    #     return self._get_iio_dev_attr_str("dout_mode_available")
 
-    @property
-    def dout_mode(self):
-        """Get Digital Output Mode."""
-        return self._get_iio_dev_attr_str("dout_mode")
+    # @property
+    # def dout_mode(self):
+    #     """Get Digital Output Mode."""
+    #     return self._get_iio_dev_attr_str("dout_mode")
 
-    @dout_mode.setter
-    def dout_mode(self, rate):
-        """Set Digital Output Mode."""
-        if rate in self.dout_mode_available:
-            self._set_iio_dev_attr_str("dout_mode", rate)
-        else:
-            raise ValueError(
-                "Error: Digital Output Mode not supported \nUse one of: "
-                + str(self.dout_mode_available)
-            )
+    # @dout_mode.setter
+    # def dout_mode(self, rate):
+    #     """Set Digital Output Mode."""
+    #     if rate in self.dout_mode_available:
+    #         self._set_iio_dev_attr_str("dout_mode", rate)
+    #     else:
+    #         raise ValueError(
+    #             "Error: Digital Output Mode not supported \nUse one of: "
+    #             + str(self.dout_mode_available)
+    #         )
 
-    @property
-    def lvds_cur_mode_available(self):
-        """Get available LVDS Output Current."""
-        return self._get_iio_dev_attr_str("lvds_cur_mode_available")
+    # @property
+    # def lvds_cur_mode_available(self):
+    #     """Get available LVDS Output Current."""
+    #     return self._get_iio_dev_attr_str("lvds_cur_mode_available")
 
-    @property
-    def lvds_cur_mode(self):
-        """Get LVDS Output Current."""
-        return self._get_iio_dev_attr_str("lvds_cur_mode")
+    # @property
+    # def lvds_cur_mode(self):
+    #     """Get LVDS Output Current."""
+    #     return self._get_iio_dev_attr_str("lvds_cur_mode")
 
-    @lvds_cur_mode.setter
-    def lvds_cur_mode(self, rate):
-        """Set LVDS Output Current."""
-        if rate in self.lvds_cur_mode_available:
-            self._set_iio_dev_attr_str("lvds_cur_mode", rate)
-        else:
-            raise ValueError(
-                "Error: LVDS Output Current not supported \nUse one of: "
-                + str(self.lvds_cur_mode_available)
-            )
+    # @lvds_cur_mode.setter
+    # def lvds_cur_mode(self, rate):
+    #     """Set LVDS Output Current."""
+    #     if rate in self.lvds_cur_mode_available:
+    #         self._set_iio_dev_attr_str("lvds_cur_mode", rate)
+    #     else:
+    #         raise ValueError(
+    #             "Error: LVDS Output Current not supported \nUse one of: "
+    #             + str(self.lvds_cur_mode_available)
+    #         )
 
-    @property
-    def lvds_term_mode_available(self):
-        """Get available LVDS Internal Termination."""
-        return self._get_iio_dev_attr_str("lvds_term_mode_available")
+    # @property
+    # def lvds_term_mode_available(self):
+    #     """Get available LVDS Internal Termination."""
+    #     return self._get_iio_dev_attr_str("lvds_term_mode_available")
 
-    @property
-    def lvds_term_mode(self):
-        """Get LVDS Internal Termination."""
-        return self._get_iio_dev_attr_str("lvds_term_mode")
+    # @property
+    # def lvds_term_mode(self):
+    #     """Get LVDS Internal Termination."""
+    #     return self._get_iio_dev_attr_str("lvds_term_mode")
 
-    @lvds_term_mode.setter
-    def lvds_term_mode(self, rate):
-        """Set LVDS Internal Termination."""
-        if rate in self.lvds_term_mode_available:
-            self._set_iio_dev_attr_str("lvds_term_mode", rate)
-        else:
-            raise ValueError(
-                "Error: LVDS Internal Termination not supported \nUse one of: "
-                + str(self.lvds_term_mode_available)
-            )
+    # @lvds_term_mode.setter
+    # def lvds_term_mode(self, rate):
+    #     """Set LVDS Internal Termination."""
+    #     if rate in self.lvds_term_mode_available:
+    #         self._set_iio_dev_attr_str("lvds_term_mode", rate)
+    #     else:
+    #         raise ValueError(
+    #             "Error: LVDS Internal Termination not supported \nUse one of: "
+    #             + str(self.lvds_term_mode_available)
+    #         )
 
     @property
     def par_ser_gpio(self):
